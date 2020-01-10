@@ -1,0 +1,18 @@
+
+<h1>Listing Planets</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th></th>
+  </tr>
+ 
+  <% @planets.each do |planet| %>
+    <tr>
+      <td><%= planet.name %></td>
+      <td><%= planet.type %></td>
+      <td><%= link_to 'Show', planet_path(planet) %></td>
+    </tr>
+  <% end %>
+</table>
