@@ -1,18 +1,22 @@
-
 <h1>Listing Planets</h1>
+<%= link_to 'New', new_planet_url%>
  
 <table>
   <tr>
     <th>Name</th>
-    <th>Type</th>
+    <th>Kind</th>
+    <th></th>
+    <th></th>
     <th></th>
   </tr>
  
   <% @planets.each do |planet| %>
     <tr>
       <td><%= planet.name %></td>
-      <td><%= planet.type %></td>
+      <td><%= planet.kind %></td>
       <td><%= link_to 'Show', planet_path(planet) %></td>
+      <td><%= link_to 'Edit', edit_planet_path(planet) %></td>
+      <td><%= link_to 'Delete', planet_path(planet), method: :delete %></td>
     </tr>
   <% end %>
 </table>

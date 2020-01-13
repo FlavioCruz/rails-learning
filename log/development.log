@@ -969,3 +969,2339 @@ Processing by PlanetsController#index as HTML
 Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 4551)
 
 
+Started GET "/" for ::1 at 2020-01-13 13:10:04 -0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (5.9ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 5006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 354ms (Views: 272.0ms | ActiveRecord: 6.5ms | Allocations: 14090)
+
+
+Started GET "/" for ::1 at 2020-01-13 13:20:22 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 5006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 0.9ms | Allocations: 14164)
+
+
+Started GET "/" for ::1 at 2020-01-13 13:20:59 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:12
+  Rendered planets/index.html.erb within layouts/application (Duration: 119143.7ms | Allocations: 324395)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 119187ms (Views: 119179.1ms | ActiveRecord: 0.8ms | Allocations: 333520)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 13:23:16 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 63.8ms | Allocations: 2878)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 100.8ms | ActiveRecord: 0.0ms | Allocations: 11581)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 13:23:31 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"RY8PAlE+q6NeN/7YV6VOLI5pk9s7S81AM5gSDpUhviMi/H7hJyIE73U29fCYZYFkXZ4I3GwZLy52Z+VuKjP3NA==", "planet"=>{"name"=>"Earth", "type"=>"Blue"}, "commit"=>"Save Planet"}
+[31mUnpermitted parameters: :name, :type[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[36mPlanet Create (13.5ms)[0m  [1m[32mINSERT INTO "planets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-13 16:24:16.278518"], ["updated_at", "2020-01-13 16:24:16.278518"]]
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[35m (98.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+Redirected to http://localhost:3000/planets/5
+Completed 302 Found in 45123ms (ActiveRecord: 112.9ms | Allocations: 61386)
+
+
+Started GET "/planets/5" for ::1 at 2020-01-13 13:24:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"5"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 32.3ms | Allocations: 1917)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 2702)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/new" for ::1 at 2020-01-13 13:24:38 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2878)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 39.9ms | ActiveRecord: 0.0ms | Allocations: 11570)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 13:24:44 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"M0i0r/lv8hiOEhl9qD/W74J8EqRO3r1ncK8IvebROZNUO8VMj3NdVKUTElVn/xmnUYuJoxmMXwk1UP/dWcNwhA==", "planet"=>{"name"=>"Earth", "type"=>"Blue"}, "commit"=>"Save Planet"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1802)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'Blue'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Planet.inheritance_column to use another column for that information.):
+  
+app/controllers/planets_controller.rb:12:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameTypeToKind (20200113162820)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aplanets" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "kind" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aplanets" ("id","name","kind","created_at","updated_at")
+                     SELECT "id","name","type","created_at","updated_at" FROM "planets"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "planets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "planets" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "kind" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "planets" ("id","name","kind","created_at","updated_at")
+                     SELECT "id","name","kind","created_at","updated_at" FROM "aplanets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aplanets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200113162820"]]
+  [1m[35m (105.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/planets/new" for ::1 at 2020-01-13 13:30:56 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2878)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 11574)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 13:31:00 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"H0YzzITH9Omfo/fTA7DIkiNFE8N+W+eg18OxC9OPwPp4NUIv8ttbpbSi/PvMcAfa8LKIxCkJBc6SPEZrbJ2J7Q==", "planet"=>{"name"=>"Earth", "type"=>"Blue"}, "commit"=>"Save Planet"}
+[31mUnpermitted parameter: :type[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[36mPlanet Create (0.9ms)[0m  [1m[32mINSERT INTO "planets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Earth"], ["created_at", "2020-01-13 16:31:00.343837"], ["updated_at", "2020-01-13 16:31:00.343837"]]
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[35m (192.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+Redirected to http://localhost:3000/planets/6
+Completed 302 Found in 208ms (ActiveRecord: 194.0ms | Allocations: 8499)
+
+
+Started GET "/planets/6" for ::1 at 2020-01-13 13:31:00 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1949)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/6" for ::1 at 2020-01-13 13:31:44 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1143)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1824)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/6" for ::1 at 2020-01-13 13:31:56 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1178)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1850)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/new" for ::1 at 2020-01-13 13:32:02 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 540)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4371)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 13:32:07 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"GxC+ztKTbtgoSDePKtYujeQ0l3FdnH+EnhC8lI4tRSp8Y88tpI/BlANJPKflFuHFN8MMdgrOnerb70v0MT8MPQ==", "planet"=>{"name"=>"Earth", "type"=>"Blue"}, "commit"=>"Save Planet"}
+[31mUnpermitted parameter: :type[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[36mPlanet Create (0.8ms)[0m  [1m[32mINSERT INTO "planets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Earth"], ["created_at", "2020-01-13 16:32:55.724926"], ["updated_at", "2020-01-13 16:32:55.724926"]]
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[35m (114.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+Redirected to http://localhost:3000/planets/7
+Completed 302 Found in 47866ms (ActiveRecord: 116.6ms | Allocations: 61046)
+
+
+Started GET "/planets/7" for ::1 at 2020-01-13 13:32:55 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1181)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1691)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/new" for ::1 at 2020-01-13 13:33:01 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5479)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 13:33:19 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"XBW698wuLVydce0QmH6Yhj6bTwYb87kKIU+bn8OjP8o7ZssUujKCELZw5jhXvlfO7WzUAUyhW2RksGz/fLF23Q==", "planet"=>{"name"=>"Earth", "kind"=>"Orange"}, "commit"=>"Save Planet"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[36mPlanet Create (0.8ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Earth"], ["kind", "Orange"], ["created_at", "2020-01-13 16:33:31.798973"], ["updated_at", "2020-01-13 16:33:31.798973"]]
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+  [1m[35m (153.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:14:in `create'
+Redirected to http://localhost:3000/planets/8
+Completed 302 Found in 27442ms (ActiveRecord: 154.7ms | Allocations: 335111)
+
+
+Started GET "/planets/8" for ::1 at 2020-01-13 13:33:46 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1309)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1930)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/8" for ::1 at 2020-01-13 13:34:09 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1139)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1808)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/8" for ::1 at 2020-01-13 13:34:21 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1178)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1847)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <p>
+    3:   <strong>Name:</strong>
+    4:   <%= @planet.name %>
+    5: </p>
+    6:  
+    7: <p>
+  
+app/views/planets/show.html.erb:4
+Started GET "/planets/8" for ::1 at 2020-01-13 13:35:15 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 64755.4ms | Allocations: 10780)
+Completed 500 Internal Server Error in 64759ms (ActiveRecord: 0.0ms | Allocations: 12161)
+
+
+Started GET "/planets/8" for ::1 at 2020-01-13 13:36:20 -0300
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <p>
+    3:   <%=byebug%>
+    4:   <strong>Name:</strong>
+    5:   <%= @planet.name %>
+    6: </p>
+    7:  
+    8: <p>
+  
+app/views/planets/show.html.erb:5
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 75684.8ms | Allocations: 27959)
+Completed 500 Internal Server Error in 75687ms (ActiveRecord: 0.0ms | Allocations: 28644)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <p>
+    3:   <%=byebug%>
+    4:   <strong>Name:</strong>
+    5:   <%= @planet.name %>
+    6: </p>
+    7:  
+    8: <p>
+  
+app/views/planets/show.html.erb:5
+Started GET "/planets/8" for ::1 at 2020-01-13 13:37:40 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 26873.2ms | Allocations: 289608)
+Completed 500 Internal Server Error in 38858ms (ActiveRecord: 0.0ms | Allocations: 318064)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <p>
+    3:   <%=byebug%>
+    4:   <strong>Name:</strong>
+    5:   <%= @planet.name %>
+    6: </p>
+    7:  
+    8: <p>
+  
+app/views/planets/show.html.erb:5
+Started GET "/" for ::1 at 2020-01-13 13:38:38 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 6720)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms | Allocations: 7981)
+
+
+  
+ActionView::Template::Error (undefined method `type' for #<Planet:0x0000556cdfc2f6e0>):
+    10:   <% @planets.each do |planet| %>
+    11:     <tr>
+    12:       <td><%= planet.name %></td>
+    13:       <td><%= planet.type %></td>
+    14:       <td><%= link_to 'Show', planet_path(planet) %></td>
+    15:     </tr>
+    16:   <% end %>
+  
+app/views/planets/index.html.erb:13
+app/views/planets/index.html.erb:10
+Started GET "/" for ::1 at 2020-01-13 13:38:52 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 5844)
+
+
+Started GET "/planets/8" for ::1 at 2020-01-13 13:39:07 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 10530.6ms | Allocations: 14172)
+Completed 500 Internal Server Error in 10532ms (ActiveRecord: 0.0ms | Allocations: 14797)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <p>
+    3:   <%=byebug%>
+    4:   <strong>Name:</strong>
+    5:   <%= @planet.name %>
+    6: </p>
+    7:  
+    8: <p>
+  
+app/views/planets/show.html.erb:5
+Started GET "/planets/8" for ::1 at 2020-01-13 13:39:53 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 6472.0ms | Allocations: 3971)
+Completed 500 Internal Server Error in 6474ms (ActiveRecord: 0.0ms | Allocations: 4487)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <p>
+    3:   <%=byebug%>
+    4:   <strong>Name:</strong>
+    5:   <%= @planet.name %>
+    6: </p>
+    7:  
+    8: <p>
+  
+app/views/planets/show.html.erb:5
+Started GET "/plane" for ::1 at 2020-01-13 13:40:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/plane"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-13 13:40:49 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 4720)
+
+
+Started GET "/planets/8" for ::1 at 2020-01-13 13:40:51 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 29607.8ms | Allocations: 11262)
+Completed 500 Internal Server Error in 29610ms (ActiveRecord: 0.0ms | Allocations: 11871)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <p>
+    3:   <%=byebug%>
+    4:   <strong>Name:</strong>
+    5:   <%= @planet.name %>
+    6: </p>
+    7:  
+    8: <p>
+  
+app/views/planets/show.html.erb:5
+Started GET "/" for ::1 at 2020-01-13 13:41:24 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 4718)
+
+
+Started GET "/planets/8" for ::1 at 2020-01-13 13:41:25 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 185443.6ms | Allocations: 12405)
+Completed 500 Internal Server Error in 185445ms (ActiveRecord: 0.0ms | Allocations: 12977)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2:   <strong>Name:</strong>
+    3:   <%= @planet.name %>
+    4: </p>
+    5:  
+    6: <p>
+    7:   <strong>Type:</strong>
+    8:   <%= @planet.kind %>
+  
+app/views/planets/show.html.erb:5
+Started GET "/planets/8" for ::1 at 2020-01-13 13:44:31 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 2100.6ms | Allocations: 4365)
+Completed 500 Internal Server Error in 2103ms (ActiveRecord: 0.0ms | Allocations: 6141)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2:   <strong>Name:</strong>
+    3:   <%= @planet.name %>
+    4: </p>
+    5:  
+    6: <p>
+    7:   <strong>Type:</strong>
+    8:   <%= @planet.kind %>
+  
+app/views/planets/show.html.erb:5
+Started GET "/planets/8" for ::1 at 2020-01-13 13:44:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:17:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 141)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 10143)
+
+
+Started GET "/" for ::1 at 2020-01-13 13:44:40 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5065)
+
+
+Started GET "/planets/8" for ::1 at 2020-01-13 14:48:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:17:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 4343)
+
+
+Started GET "/" for ::1 at 2020-01-13 14:49:41 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 6306)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:49:46 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 976)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 4785)
+
+
+Started GET "/" for ::1 at 2020-01-13 14:49:51 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 967)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 4772)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:53:26 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1196)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2459)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"create"}):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'Create', controller:'create'%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 14:57:00 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4764)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.8ms | Allocations: 9929)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:03 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 926)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 4733)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:05 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms | Allocations: 4732)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:06 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 4724)
+
+
+Started GET "/" for ::1 at 2020-01-13 14:57:08 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4730)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:10 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4733)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:16 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 5882)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:17 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4733)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:17 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 4728)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:18 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 920)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 4729)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:22 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 4729)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:23 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.6ms | Allocations: 4734)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:23 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 918)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4725)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 14:57:34 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 5917)
+
+
+Started GET "/planets.new" for ::1 at 2020-01-13 14:57:35 -0300
+Processing by PlanetsController#index as 
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 952)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 4916)
+
+
+Started GET "/planets.new" for ::1 at 2020-01-13 14:57:46 -0300
+Processing by PlanetsController#index as 
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 5958)
+
+
+Started GET "/planets.%2Fnew" for ::1 at 2020-01-13 14:57:46 -0300
+Processing by PlanetsController#index as 
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 4773)
+
+
+Started GET "/planets.%2Fnew" for ::1 at 2020-01-13 14:57:57 -0300
+Processing by PlanetsController#index as 
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 342.4ms | Allocations: 164896)
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 0.4ms | Allocations: 166207)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new' for #<#<Class:0x00007f5a2cd92de8>:0x00007f5a2cd90f20>):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', planets_path(new)%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets.new" for ::1 at 2020-01-13 14:58:09 -0300
+Processing by PlanetsController#index as 
+  Rendering planets/index.html.erb within layouts/application
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1157)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2469)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"planets", :format=>"new"}, missing required keys: [:id]):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', planet_path%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 14:59:03 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 152.8ms | Allocations: 87283)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 0.8ms | Allocations: 90474)
+
+
+  
+ActionView::Template::Error (undefined method `new_planet' for #<#<Class:0x00007f9c11005320>:0x000056552ba974d8>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet()%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 14:59:10 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 291.8ms | Allocations: 162234)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.3ms | Allocations: 163526)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_planet' for #<#<Class:0x000056552ac9c4a0>:0x000056552ac916b8>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 14:59:22 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1196)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.2ms | Allocations: 8413)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 14:59:23 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2590)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 6531)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 14:59:32 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"5fWRKfZeMoP6a2SI1R1jAwYthnA1SzqhlXZuRVOZT3mijBuNio9kZSwBE4MmZEftQ1UVLn2rfEqpKgJtGwsaKw==", "planet"=>{"name"=>"Planet 1", "kind"=>"AAAAAA"}, "commit"=>"Save Planet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[36mPlanet Create (0.3ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Planet 1"], ["kind", "AAAAAA"], ["created_at", "2020-01-13 17:59:32.777664"], ["updated_at", "2020-01-13 17:59:32.777664"]]
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[35m (239.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+Redirected to http://localhost:3000/planets/9
+Completed 302 Found in 246ms (ActiveRecord: 239.8ms | Allocations: 4321)
+
+
+Started GET "/planets/9" for ::1 at 2020-01-13 14:59:33 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 5299)
+
+
+Started GET "/planets/9" for ::1 at 2020-01-13 15:00:27 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 265.5ms | Allocations: 148274)
+Completed 500 Internal Server Error in 269ms (ActiveRecord: 0.1ms | Allocations: 150036)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `planets_link' for #<#<Class:0x00007f9c1103d180>:0x00007f9c11033680>
+Did you mean?  planets_url):
+     9: </p>
+    10: 
+    11: <p>
+    12:   <%= link_to "Home", planets_link %>
+    13: </p>
+  
+app/views/planets/show.html.erb:12
+Started GET "/planets/9" for ::1 at 2020-01-13 15:00:43 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.1ms | Allocations: 5451)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:00:44 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 5162)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 15:00:45 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4678)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 15:00:51 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"sjqtFva4Ou9+a2a2fhxrl4I2P9vg58/r5+mawQSann71QyeyimlsCagBEb2NZU95x06shagHiQDbtfbpTAjLLA==", "planet"=>{"name"=>"Planet 2", "kind"=>"BBBBBBBBB"}, "commit"=>"Save Planet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[36mPlanet Create (1.2ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Planet 2"], ["kind", "BBBBBBBBB"], ["created_at", "2020-01-13 18:00:51.368384"], ["updated_at", "2020-01-13 18:00:51.368384"]]
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[35m (237.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+Redirected to http://localhost:3000/planets/10
+Completed 302 Found in 245ms (ActiveRecord: 239.1ms | Allocations: 3990)
+
+
+Started GET "/planets/10" for ::1 at 2020-01-13 15:00:51 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4356)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:00:53 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1022)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4836)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:42:59 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 309.2ms | Allocations: 168251)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.9ms | Allocations: 171459)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_planet' for #<#<Class:0x00007f21590362a0>:0x00007f2159034900>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 15:43:05 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 293.0ms | Allocations: 163329)
+Completed 500 Internal Server Error in 295ms (ActiveRecord: 0.3ms | Allocations: 163881)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_planet' for #<#<Class:0x00007f21590362a0>:0x000055bcaa84e538>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 15:43:08 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 285.6ms | Allocations: 163302)
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.3ms | Allocations: 163832)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_planet' for #<#<Class:0x00007f21590362a0>:0x00007f215b47d190>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 15:43:10 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 290.0ms | Allocations: 163314)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.3ms | Allocations: 163844)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_planet' for #<#<Class:0x00007f21590362a0>:0x00007f2159480658>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 15:43:14 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Planet Load (0.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered planets/index.html.erb within layouts/application (Duration: 274.3ms | Allocations: 163301)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.4ms | Allocations: 163823)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_planet' for #<#<Class:0x00007f21590362a0>:0x00007f215a0c6f20>
+Did you mean?  new_planet_url):
+    1: <h1>Listing Planets</h1>
+    2: <%= link_to 'New', new_planet%>
+    3:  
+    4: <table>
+    5:   <tr>
+  
+app/views/planets/index.html.erb:2
+Started GET "/planets" for ::1 at 2020-01-13 15:43:19 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1275)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.2ms | Allocations: 8509)
+
+
+Started GET "/planets/4" for ::1 at 2020-01-13 15:45:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 197)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 6.1ms | ActiveRecord: 0.7ms | Allocations: 9600)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:45:50 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1040)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 4858)
+
+
+Started GET "/planets/10" for ::1 at 2020-01-13 15:45:50 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4357)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:45:52 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 4829)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 15:45:53 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2596)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 6537)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 15:45:57 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"LggGGcTGtmXNAejjoLo9oqQ1YRiyEtjGmuPGQyXujAdpcYy9uBfggxtrn+hTwxlM4U3yRvryni2mv6prbXzZVQ==", "planet"=>{"name"=>"wgdhsv", "kind"=>"jbsjdbjsdf"}, "commit"=>"Save Planet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[36mPlanet Create (1.0ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "wgdhsv"], ["kind", "jbsjdbjsdf"], ["created_at", "2020-01-13 18:45:57.944095"], ["updated_at", "2020-01-13 18:45:57.944095"]]
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[35m (232.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+Redirected to http://localhost:3000/planets/11
+Completed 302 Found in 242ms (ActiveRecord: 233.1ms | Allocations: 4287)
+
+
+Started GET "/planets/11" for ::1 at 2020-01-13 15:45:58 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4360)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:46:00 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1066)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4880)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 15:47:39 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1725)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 6473)
+
+
+Started DELETE "/planets/10" for ::1 at 2020-01-13 15:47:40 -0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for PlanetsController):
+  
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.2.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.1.0) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.0) lib/rack/etag.rb:27:in `call'
+rack (2.1.0) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.0) lib/rack/head.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.0) lib/rack/session/abstract/id.rb:277:in `context'
+rack (2.1.0) lib/rack/session/abstract/id.rb:271:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/planets/10" for ::1 at 2020-01-13 15:47:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6OBZFXdkuaKH2+Zx3a931y6hkx7WnsciPhNSJ+2sNJePkyj2AXgW7qza7VkSb7if/VYIGYHMJUx77KVHUr59gA==", "id"=>"10"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (110.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+No template found for PlanetsController#destroy, rendering head :no_content
+Completed 204 No Content in 131ms (ActiveRecord: 111.6ms | Allocations: 9781)
+
+
+Started GET "/" for ::1 at 2020-01-13 15:48:00 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1437)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5406)
+
+
+Started GET "/" for ::1 at 2020-01-13 15:48:01 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 5219)
+
+
+Started GET "/" for ::1 at 2020-01-13 15:48:02 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5220)
+
+
+Started DELETE "/planets/8" for ::1 at 2020-01-13 15:48:03 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mV4tdoqYT6+PlarURVw2CjquYoA2J6L7CXpq9bwWq0H+LVyV/ITg46SUofyKnPlC6Vn5h2F1QJVMhZ2VAwTiVg==", "id"=>"8"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (137.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+No template found for PlanetsController#destroy, rendering head :no_content
+Completed 204 No Content in 145ms (ActiveRecord: 138.0ms | Allocations: 4052)
+
+
+Started GET "/" for ::1 at 2020-01-13 15:48:08 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms | Allocations: 5138)
+
+
+Started GET "/" for ::1 at 2020-01-13 16:12:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 9009)
+
+
+Started DELETE "/planets/6" for ::1 at 2020-01-13 16:12:05 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"moHAYb9iiussVHyNWRybIYs3Nc6CRBcBnj/9pGHKl2b98rGCyX4lpwdVd6WW3FRpWMCuydUW9W/bwArE3tjecQ==", "id"=>"6"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (117.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000planet#index
+Completed 302 Found in 122ms (ActiveRecord: 117.5ms | Allocations: 3259)
+
+
+Started GET "/" for ::1 at 2020-01-13 16:12:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.8ms | Allocations: 9266)
+
+
+Started DELETE "/planets/3" for ::1 at 2020-01-13 16:12:17 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w6yFkRXoFD0YcOHZPkKkLSOhhjgRV6cNfEzOVjmf8Cak3/RyY/S7cTNx6vHxgmtl8FYdP0YFRWM5szk2ho25MQ==", "id"=>"3"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000planets#index
+Completed 302 Found in 104ms (ActiveRecord: 93.9ms | Allocations: 4043)
+
+
+Started GET "/" for ::1 at 2020-01-13 16:12:26 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 4985)
+
+
+Started GET "/" for ::1 at 2020-01-13 16:14:16 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 5490)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 53.2ms | ActiveRecord: 0.8ms | Allocations: 14645)
+
+
+Started DELETE "/planets/4" for ::1 at 2020-01-13 16:14:17 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZAsHxjM+rX6+f2FmmuwmQjMIBaUYybC4T06h2ZRAOu8DeHYlRSICMpV+ak5VLOkK4P+eok+bUtYKsVa5K1Jz+A==", "id"=>"4"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (1.3ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (84.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000planets
+Completed 302 Found in 93ms (ActiveRecord: 85.8ms | Allocations: 3857)
+
+
+Started DELETE "/planets/4" for ::1 at 2020-01-13 16:14:26 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZAsHxjM+rX6+f2FmmuwmQjMIBaUYybC4T06h2ZRAOu8DeHYlRSICMpV+ak5VLOkK4P+eok+bUtYKsVa5K1Jz+A==", "id"=>"4"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms | Allocations: 2330)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Planet with 'id'=4):
+  
+app/controllers/planets_controller.rb:19:in `destroy'
+Started GET "/" for ::1 at 2020-01-13 16:14:28 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4200)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 8227)
+
+
+Started DELETE "/planets/2" for ::1 at 2020-01-13 16:14:30 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vrwU15AYE2qnia3WRTIVet/B78WGdm3120EVIEHwLqHZz2U05gS8JoyIpv6K8toyDDZ0wtEkj5uevuJA/uJntg==", "id"=>"2"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to 
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 84.5ms | Allocations: 4311)
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/planets_controller.rb:20:in `destroy'
+Started GET "/" for ::1 at 2020-01-13 16:14:48 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4664)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.9ms | Allocations: 9062)
+
+
+Started DELETE "/planets/5" for ::1 at 2020-01-13 16:14:50 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wP+lLX74cJVDvyXAqalgf/RTy9Ca+ZMnHJePB6B5zrinjNTOCOTf2Wi+Luhmaa83J6RQ182rcUlZaHhnH2uHrw==", "id"=>"5"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (107.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+No template found for PlanetsController#destroy, rendering head :no_content
+Completed 204 No Content in 117ms (ActiveRecord: 108.3ms | Allocations: 5502)
+
+
+Started DELETE "/planets/5" for ::1 at 2020-01-13 16:14:51 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wP+lLX74cJVDvyXAqalgf/RTy9Ca+ZMnHJePB6B5zrinjNTOCOTf2Wi+Luhmaa83J6RQ182rcUlZaHhnH2uHrw==", "id"=>"5"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1169)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Planet with 'id'=5):
+  
+app/controllers/planets_controller.rb:19:in `destroy'
+Started GET "/" for ::1 at 2020-01-13 16:14:56 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 938)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 4757)
+
+
+Started DELETE "/planets/5" for ::1 at 2020-01-13 16:14:58 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wP+lLX74cJVDvyXAqalgf/RTy9Ca+ZMnHJePB6B5zrinjNTOCOTf2Wi+Luhmaa83J6RQ182rcUlZaHhnH2uHrw==", "id"=>"5"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1164)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Planet with 'id'=5):
+  
+app/controllers/planets_controller.rb:19:in `destroy'
+Started GET "/" for ::1 at 2020-01-13 16:15:39 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4575)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.8ms | Allocations: 8952)
+
+
+Started DELETE "/planets/1" for ::1 at 2020-01-13 16:15:42 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s4xJAUScMCCOSHjUA9pwZOOKHs/Atc9SD7e9liN9bNHU/zjiMoCfbKVJc/zMGr8sMH2FyJfnLTxKSEr2nG8lxg==", "id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (1.9ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (86.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 88.7ms | Allocations: 4049)
+
+
+Started GET "/" for ::1 at 2020-01-13 16:15:42 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4847)
+
+
+Started DELETE "/planets/11" for ::1 at 2020-01-13 16:15:53 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X8S9Ev5ZwmeISJF5fp+TFm1JCKPUlsR06QT3Gfh45lw4t8zxiEVtK6NJmlGxX1xevr6TpIPEJhqs+wB5R2qvSw==", "id"=>"11"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (106.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 107.1ms | Allocations: 4094)
+
+
+Started GET "/" for ::1 at 2020-01-13 16:15:53 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4590)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 16:16:13 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 6859)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 10714)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 16:16:33 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"x1gvLAXhMa4+JpQeKO0yp88dTPw/VxVa2Z3woUz8PYOAIaWIeTBnSOhM4xXblBZJimXfone3U7HlwZyJBG5o0Q==", "planet"=>{"name"=>"Planeta dos Macacos", "kind"=>"Macacos na superficie"}, "commit"=>"Save Planet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[36mPlanet Create (0.4ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Planeta dos Macacos"], ["kind", "Macacos na superficie"], ["created_at", "2020-01-13 19:16:33.717021"], ["updated_at", "2020-01-13 19:16:33.717021"]]
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[35m (264.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+Redirected to http://localhost:3000/planets/10
+Completed 302 Found in 274ms (ActiveRecord: 265.4ms | Allocations: 4266)
+
+
+Started GET "/planets/10" for ::1 at 2020-01-13 16:16:33 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 4664)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 16:16:42 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4674)
+
+
+Started GET "/planets/10" for ::1 at 2020-01-13 16:16:44 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4355)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 16:16:46 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 4675)
+
+
+Started DELETE "/planets/9" for ::1 at 2020-01-13 16:16:47 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BUAFGEoRQzZJdMLW3rWqimdXD9galPyoziAE+7rVf59iM3T7PA3semJ1yf4RdWXCtKCU303GHsaL3/ObBcc2iA==", "id"=>"9"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (85.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 102ms (ActiveRecord: 85.4ms | Allocations: 3924)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 16:16:47 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4768)
+
+
+Started DELETE "/planets/7" for ::1 at 2020-01-13 16:16:48 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YnqbAW7thnjMhtj73w5M2cjbLWGgsQoFveUoWX2Uv3QFCeriGPEpNOeH09MQzoORGyy2Zvfj6Gv4Gt85wob2Yw==", "id"=>"7"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (1.4ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (97.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 108ms (ActiveRecord: 98.6ms | Allocations: 3929)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 16:16:49 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 4515)
+
+
+Started DELETE "/planets/10" for ::1 at 2020-01-13 16:16:49 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GtCW2fOKJ9VWrvs9KNF8OknMDWUSK2Fq+UKn9grlWeJ9o+c6hZaImX2v8BXnEbNymjuWYkV5gwS8vVCWtfcQ9Q==", "id"=>"10"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (1.5ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (92.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 100ms (ActiveRecord: 94.7ms | Allocations: 3927)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 16:16:49 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 4423)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 16:16:53 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4433)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:06:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 5616)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:06:59 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 5135)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:07:01 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 4429)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:07:02 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4394)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:07:03 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (3.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 3.3ms | Allocations: 4429)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:07:04 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4393)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:07:08 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"jiR836HNAWiUwcvB8qWCfqfvDncuw6mlgYCshbcLr7zJXfZ73RxXjkKrvMoB3KaQ4pedKWYj70693MCt/5n67g==", "planet"=>{"name"=>"", "kind"=>""}, "commit"=>"Save Planet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[36mPlanet Create (3.5ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["kind", ""], ["created_at", "2020-01-13 20:07:08.654623"], ["updated_at", "2020-01-13 20:07:08.654623"]]
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+  [1m[35m (97.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:10:in `create'
+Redirected to http://localhost:3000/planets/1
+Completed 302 Found in 105ms (ActiveRecord: 100.8ms | Allocations: 3887)
+
+
+Started GET "/planets/1" for ::1 at 2020-01-13 17:07:08 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:15:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 4663)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:07:10 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4509)
+
+
+Started DELETE "/planets/1" for ::1 at 2020-01-13 17:07:10 -0300
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IAAxVfdidbWFIHZPySjEiajtvFcgwqD17HCzltEKYg1Hc0C2gX7a+a4hfWcG6AvBexonUHeQQpupj0T2bhgrGg==", "id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[36mPlanet Destroy (1.5ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+  [1m[35m (95.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:19:in `destroy'
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 103ms (ActiveRecord: 96.9ms | Allocations: 3924)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:07:10 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 4428)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:08:33 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 959)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4888)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:08:34 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"7hSclfPJ0X9O/w8k+zECS7J4GCtpmIFae8eJ3dLN0QWpbRYxjxiHmZiVeC8ISCal9wCLdSF4x7FHm+X1ml+EVw==", "planet"=>{"name"=>"", "kind"=>""}, "commit"=>"Save Planet"}
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms | Allocations: 5572)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:08:34 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 635)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 4473)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:08:37 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 591)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4395)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:08:38 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"Vc0JuhlEdCS9ybpP7+Z90+vt1yLQlLC8w4iEg3vTvdwStIMeZZUiwmujzUQcn1k9rpVEfJh09lf/1OirM0Hojg==", "planet"=>{"name"=>"", "kind"=>""}, "commit"=>"Save Planet"}
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1282)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:08:38 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 4426)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:10:11 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4889)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:10:12 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"adwM/W/mI+Kf/mzjaJW+HHCJQpqXnUZywmGipV7diNYupYZZEzd1BEmUG+ib7JryNfHRxN99AJn+Pc6NFk/dhA==", "planet"=>{"name"=>"", "kind"=>""}, "commit"=>"Save Planet"}
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 827)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 9611)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:10:13 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"FvOGEcL5lTz5Du7V7LzCMlaBfkJWDDeWQ2JOk/vDgkRxgPfytOU6cNIP5f0jfA16hXblRQFe1fgGnbnzRNHLUw==", "planet"=>{"name"=>"", "kind"=>""}, "commit"=>"Save Planet"}
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 5390)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:11:51 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5646)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:11:52 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1620)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2271)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    3: 
+    4: 
+    5: <%= form_with scope: :planet, url: planets_path,  local: true do |form| %>
+    6:   <% if @planet.errors.any? %>
+    7:     <div id="error_explanation">
+    8:       <h2>
+    9:         <%= pluralize(@planet.errors.count, "error") %> prohibited
+  
+app/views/planets/new.html.erb:6
+app/views/planets/new.html.erb:5
+Started GET "/planets" for ::1 at 2020-01-13 17:11:57 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 4434)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:18:00 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 5340)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:18:02 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1255)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1766)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    3: 
+    4: 
+    5: <%= form_with scope: :planet, url: planets_path,  local: true do |form| %>
+    6:   <% if @planet.errors.any? %>
+    7:     <div id="error_explanation">
+    8:       <h2>
+    9:         <%= pluralize(@planet.errors.count, "error") %> prohibited
+  
+app/views/planets/new.html.erb:6
+app/views/planets/new.html.erb:5
+Started GET "/planets" for ::1 at 2020-01-13 17:18:09 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.1ms | Allocations: 4428)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:19:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 5524)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:19:59 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 8179)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:20:00 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"xBjCGIyIGHY20mBSAuT5vsqKwYI/b3HTRfRupqhRMRmDYUi88FlOkOC4F1nxnd1Qj/JS3HePNzh5qAKO4MNkSw==", "planet"=>{"name"=>"", "kind"=>""}, "commit"=>"Save Planet"}
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 943)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5596)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:20:10 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 4426)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:20:12 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4590)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:20:13 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 4425)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:24:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1554)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 9.2ms | ActiveRecord: 0.6ms | Allocations: 10594)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:24:38 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:11
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 4841)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:27:07 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1328)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms | Allocations: 6553)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:27:09 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 620)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 4431)
+
+
+Started GET "/planets/new" for ::1 at 2020-01-13 17:27:10 -0300
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 8675)
+
+
+Started POST "/planets" for ::1 at 2020-01-13 17:27:18 -0300
+Processing by PlanetsController#create as HTML
+  Parameters: {"authenticity_token"=>"eofDw+bczoackHLxOTMGppCEVy/tTRfPbNVAW4+AyqM9/klnmg2YYEr6BfrKSiJI1fzEcaWtUSRQiSxzxxKf8Q==", "planet"=>{"name"=>"Planet 1", "kind"=>"Type 1"}, "commit"=>"Save Planet"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:23:in `create'
+  [1m[36mPlanet Create (1.5ms)[0m  [1m[32mINSERT INTO "planets" ("name", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Planet 1"], ["kind", "Type 1"], ["created_at", "2020-01-13 20:27:18.435605"], ["updated_at", "2020-01-13 20:27:18.435605"]]
+  ↳ app/controllers/planets_controller.rb:23:in `create'
+  [1m[35m (284.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:23:in `create'
+Redirected to http://localhost:3000/planets/1
+Completed 302 Found in 292ms (ActiveRecord: 285.7ms | Allocations: 4057)
+
+
+Started GET "/planets/1" for ::1 at 2020-01-13 17:27:18 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (1.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:31:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.3ms | Allocations: 4780)
+
+
+Started GET "/planets" for ::1 at 2020-01-13 17:27:21 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4554)
+
+
+Started POST "/planets/1" for ::1 at 2020-01-13 17:27:23 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/planets/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/planets/1" for ::1 at 2020-01-13 17:28:21 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/planets/1"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.0) lib/rack/method_override.rb:24:in `call'
+rack (2.1.0) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.0) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-13 17:28:24 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 5725)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-13 17:28:26 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1195)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, String passed.):
+  
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-13 17:30:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.8ms | Allocations: 8798)
+
+
+Started GET "/" for ::1 at 2020-01-13 17:30:04 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4530)
+
+
+Started GET "/" for ::1 at 2020-01-13 17:30:05 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4536)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-13 17:30:06 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 1269)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
