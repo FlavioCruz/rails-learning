@@ -3305,3 +3305,447 @@ ActionController::ParameterMissing (param is missing or the value is empty: plan
   
 app/controllers/planets_controller.rb:43:in `planet_params'
 app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/planets/1/edit" for ::1 at 2020-01-13 18:05:06 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (14.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 59ms (ActiveRecord: 15.1ms | Allocations: 6266)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-13 18:08:34 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 41.5ms | Allocations: 1058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 284ms (Views: 281.6ms | ActiveRecord: 0.3ms | Allocations: 8360)
+
+
+Started GET "/" for ::1 at 2020-01-13 18:08:43 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 740)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4557)
+
+
+Started GET "/" for ::1 at 2020-01-13 18:12:17 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 4537)
+
+
+Started GET "/" for ::1 at 2020-01-13 18:12:19 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4531)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-13 18:12:21 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms | Allocations: 1172)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-13 18:12:27 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms | Allocations: 4556)
+
+
+Started GET "/" for ::1 at 2020-01-13 18:15:25 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 5726)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-13 18:15:26 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.2ms | Allocations: 1144)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-13 18:15:28 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 730)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 4543)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:09:57 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (8.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 47.9ms | Allocations: 5065)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 281ms (Views: 216.0ms | ActiveRecord: 8.8ms | Allocations: 14221)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:10:05 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 31ms (ActiveRecord: 0.2ms | Allocations: 1896)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:10:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.8ms | Allocations: 8921)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:10:46 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 4533)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:10:48 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 806048ms (ActiveRecord: 0.2ms | Allocations: 54798)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:24:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 3362ms (ActiveRecord: 0.2ms | Allocations: 6405)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:24:26 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 1.0ms | Allocations: 8800)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:24:27 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+  Rendering planets/edit.html.erb within layouts/application
+  Rendered planets/edit.html.erb within layouts/application (Duration: 52.0ms | Allocations: 3606)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.2ms | Allocations: 8185)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:25:24 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms | Allocations: 5310)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:25:32 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.9ms | Allocations: 8842)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:25:34 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1366)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, Planet passed.):
+  
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:25:39 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 4532)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:25:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 1.0ms | Allocations: 8844)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:25:48 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 1318)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, Symbol passed.):
+  
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:25:54 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4536)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:26:29 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.9ms | Allocations: 8797)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:26:31 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1327)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, NilClass passed.):
+  
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:26:36 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 4539)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:28:16 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 972)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 5729)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:28:28 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4362)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.0ms | Allocations: 8804)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:28:30 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 1266)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: planet):
+  
+app/controllers/planets_controller.rb:43:in `planet_params'
+app/controllers/planets_controller.rb:13:in `edit'
+Started GET "/" for ::1 at 2020-01-14 14:32:17 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4608)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.9ms | Allocations: 9833)
+
+
+Started GET "/" for ::1 at 2020-01-14 14:32:18 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.1ms | Allocations: 4543)
+
+
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:32:19 -0300
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+  Rendering planets/edit.html.erb within layouts/application
+  Rendered planets/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 5811)
+
+
+Started PATCH "/planets/1" for ::1 at 2020-01-14 14:32:24 -0300
+Processing by PlanetsController#update as HTML
+  Parameters: {"authenticity_token"=>"G2V/eQmImer0wj770o46MOXbH6msS504UV6q6LwX23TyveZNFNksBLI4yFVnPx8irMZIEOtvNenndvwxg2As1Q==", "planet"=>{"name"=>"Planet 1", "kind"=>"Type 13"}, "commit"=>"Update Planet", "id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:31:in `update'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1538)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Planet with 'id'={"name"=>"Planet 1", "kind"=>"Type 13"}):
+  
+app/controllers/planets_controller.rb:31:in `update'
+Started GET "/planets/1/edit" for ::1 at 2020-01-14 14:38:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlanetsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:11:in `edit'
+  Rendering planets/edit.html.erb within layouts/application
+  Rendered planets/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 9227)
+
+
+Started PATCH "/planets/1" for ::1 at 2020-01-14 14:38:58 -0300
+Processing by PlanetsController#update as HTML
+  Parameters: {"authenticity_token"=>"rVpukJTnjrbdWsKK3bWhbv2bgISN0psRr3eh/EPV88PPKNCpLb0CXexPU6yQ2vRTCc3soeB13GeDoXd0PLINyw==", "planet"=>{"name"=>"Planet 1", "kind"=>"Type 13"}, "commit"=>"Update Planet", "id"=>"1"}
+  [1m[36mPlanet Load (0.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:24:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:25:in `update'
+  [1m[36mPlanet Update (43.2ms)[0m  [1m[33mUPDATE "planets" SET "kind" = ?, "updated_at" = ? WHERE "planets"."id" = ?[0m  [["kind", "Type 13"], ["updated_at", "2020-01-14 17:38:58.030589"], ["id", 1]]
+  ↳ app/controllers/planets_controller.rb:25:in `update'
+  [1m[35m (242.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:25:in `update'
+Redirected to http://localhost:3000/planets/1
+Completed 302 Found in 296ms (ActiveRecord: 285.4ms | Allocations: 4801)
+
+
+Started GET "/planets/1" for ::1 at 2020-01-14 14:38:58 -0300
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:33:in `show'
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 4656)
+
+
+Started GET "/planets" for ::1 at 2020-01-14 14:38:59 -0300
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:13
+  Rendered planets/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 745)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 4556)
+
+

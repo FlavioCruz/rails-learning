@@ -1,13 +1,11 @@
+<h1>Edit Planet</h1>
 
-<h1>New Planet</h1>
-
-
-<%= form_with model: @planet,  local: true do |form| %>
+<%= form_with(model: @planet,  local: true) do |form| %>
   <% if @planet.errors.any? %>
     <div id="error_explanation">
       <h2>
         <%= pluralize(@planet.errors.count, "error") %> prohibited
-        this article from being saved:
+        this planet from being saved:
       </h2>
       <ul>
         <% @planet.errors.full_messages.each do |msg| %>
@@ -30,6 +28,6 @@
     <%= form.submit %>
   </p>
   <p>
-    <%=link_to 'Cancel', controller: 'planets'%>
+    <%=link_to 'Cancel', planets_path%>
   </p>
 <% end %>
